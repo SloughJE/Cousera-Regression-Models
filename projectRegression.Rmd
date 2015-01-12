@@ -184,4 +184,5 @@ plot(booteval.relimp(boot,sort=TRUE)) # plot result
 We have determined that there is a difference in mpg in relation to transmission type and have quantified that difference. However, transmission type does not appear to be a very good explanatory variable for mpg; weight, horsepower, and number of cylinders are all more significant variables.  
 
 **R-code**
+
 Available at: https://github.com/SloughJE/Cousera-Regression-Models
