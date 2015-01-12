@@ -2,7 +2,7 @@
 title: "The Relationship Between Miles per Gallon and Transmission Type"
 author: "John Slough II"
 date: "12 Jan 2015"
-output: pdf_document
+output: html_document
 ---
 **Executive Summary**
 
@@ -173,7 +173,7 @@ For our last analysis we will look at Bootstrap Measures of Relative Importance 
 ```{r,echo=FALSE,cache=TRUE,warning=FALSE,cache=TRUE,}
 library(relaimpo)
 
-boot <- boot.relimp(fitAIC, b = 1000, type = c("lmg"), rank = TRUE,diff = TRUE, rela = TRUE)
+boot <- boot.relimp(fitAIC, b = 500, type = c("lmg"), rank = TRUE,diff = TRUE, rela = TRUE)
 boot2=booteval.relimp(boot) # print result
 plot(booteval.relimp(boot,sort=TRUE)) # plot result 
 ```
