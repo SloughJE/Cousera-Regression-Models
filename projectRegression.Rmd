@@ -170,7 +170,7 @@ We have seen in the explaoratory data analysis section that manual transmissions
 
 For our last analysis we will look at Bootstrap Measures of Relative Importance of explanatory variables.  This is a nice way to interpret the importance of variables with regard to their contribution to the r^2^ of a model. We used the model fit by AIC which includes the variables cylinder, horsepower, weight, and transmission type. The results are shown in the plot below.  We can clearly see that am, transmission type, is the least important of these variables contributing only about 14% to the r^2^.  
 
-```{r,echo=FALSE,cache=TRUE}
+```{r,echo=FALSE,cache=TRUE,warning=FALSE,cache=TRUE,}
 library(relaimpo)
 
 boot <- boot.relimp(fitAIC, b = 1000, type = c("lmg"), rank = TRUE,diff = TRUE, rela = TRUE)
@@ -182,3 +182,6 @@ plot(booteval.relimp(boot,sort=TRUE)) # plot result
 **Conclusion**
 
 We have determined that there is a difference in mpg in relation to transmission type and have quantified that difference. However, transmission type does not appear to be a very good explanatory variable for mpg; weight, horsepower, and number of cylinders are all more significant variables.  
+
+**R-code**
+Available at: https://github.com/SloughJE/Cousera-Regression-Models
