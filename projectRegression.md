@@ -1,3 +1,6 @@
+library(knitr)
+knit2html("projectRegression.Rmd")
+
 ---
 title: "The Relationship Between Miles per Gallon and Transmission Type"
 author: "John Slough II"
@@ -133,37 +136,6 @@ We have seen in the explaoratory data analysis section that manual transmissions
 **Relative Importance of Variables**
 
 For our last analysis we will look at Bootstrap Measures of Relative Importance of explanatory variables.  This is a nice way to interpret the importance of variables with regard to their contribution to the r^2^ of a model. We used the model fit by AIC which includes the variables cylinder, horsepower, weight, and transmission type. The results are shown in the plot below.  We can clearly see that am, transmission type, is the least important of these variables contributing only about 14% to the r^2^.  
-
-
-```
-## Loading required package: MASS
-## Loading required package: boot
-## 
-## Attaching package: 'boot'
-## 
-## The following object is masked from 'package:survival':
-## 
-##     aml
-## 
-## The following object is masked from 'package:lattice':
-## 
-##     melanoma
-## 
-## Loading required package: survey
-## 
-## Attaching package: 'survey'
-## 
-## The following object is masked from 'package:graphics':
-## 
-##     dotchart
-## 
-## Loading required package: mitools
-## This is the non-US version of package relaimpo including the metric pmvd.
-## 
-## Please make sure that you are entitled to using it.
-## 
-## If you are a US-user, please use the global version (without pmvd) that is available on CRAN.
-```
 
 ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
 
