@@ -1,3 +1,6 @@
+library(knitr)
+knit2html("projectRegression.Rmd")
+
 ---
 title: "The Relationship Between Miles per Gallon and Transmission Type"
 author: "John Slough II"
