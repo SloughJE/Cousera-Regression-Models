@@ -45,7 +45,7 @@ man=subset(mtcars, am=="Manual")
 
 First we must determine whether or not there is actually a difference between automatic and manual transmissions in terms of mpg.  The following boxplot appears to show that there is a difference.  
 
-```{r,echo=FALSE,fig.height=9,fig.width=12}
+```{r,echo=FALSE,fig.height=9,fig.width=13}
 color1="#F8766D75"
 color2="#00BFC475"
 col1legend="#F8766D"
@@ -61,7 +61,7 @@ Another way to view the difference between automatic and muanual transmissions' 
 
 
 
-```{r,echo=FALSE,fig.height=9,fig.width=12}
+```{r,echo=FALSE,fig.height=9,fig.width=13}
 a=density(auto$mpg)
 m=density(man$mpg)
 plot(m,ylim=c(0,.1),col="darkblue",lwd=1,xlab="mpg",main="Density of MPG by Transmission Type for MtCars")
@@ -145,7 +145,7 @@ Here, all of the coefficients are highly significant.  This model has an r^2^ of
 The plots below are the diagnostic plots for the model.  There do not appear to be any problems with these plots; the residuals appear randomly, the standardized residuals appear normally distributed, and there are not any highly influential outliers. 
 
 
-```{r,echo=FALSE,,fig.height=9,fig.width=12}
+```{r,echo=FALSE,,fig.height=9,fig.width=13}
 layout(matrix(c(1,2,3,4),2,2)) # optional 4 graphs/page 
 plot(fitNOhp,pch=16)
 
@@ -173,7 +173,7 @@ We have seen in the explaoratory data analysis section that manual transmissions
 
 For our last analysis we will look at Bootstrap Measures of Relative Importance of explanatory variables.  This is a nice way to interpret the importance of variables with regard to their contribution to the r^2^ of a model. We used the model fit by AIC which includes the variables cylinder, horsepower, weight, and transmission type. The results are shown in the plot below.  We can clearly see that am, transmission type, is the least important of these variables contributing only about 14% to the r^2^.  
 
-```{r,echo=FALSE,cache=TRUE,warning=FALSE,cache=TRUE,,fig.height=9,fig.width=12}
+```{r,echo=FALSE,cache=TRUE,warning=FALSE,cache=TRUE,,fig.height=9,fig.width=13}
 library(relaimpo)
 
 boot <- boot.relimp(fitAIC, b = 500, type = c("lmg"), rank = TRUE,diff = TRUE, rela = TRUE)
