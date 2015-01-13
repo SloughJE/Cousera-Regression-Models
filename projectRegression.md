@@ -2,11 +2,12 @@ library(knitr)
 knit2html("projectRegression.Rmd")
 
 ---
-title: "The Relationship Between Miles per Gallon and Transmission Type"
-author: "John Slough II"
-date: "12 Jan 2015"
-output: html_document
+**The Relationship Between Miles per Gallon and Transmission Type**
 ---
+John Slough II
+13 Jan 2015
+
+
 **Executive Summary**
 
 From our analysis of the mtcars dataset, we have determined that in general  manual transmissions are better in terms of miles per gallon than automatic transmissions.   In a linear regression model with only transmission type as an explanatory variable, a change from automatic to manual transmission increased the mpg by 7.245 however, transmission type only explained 36% of the variation in mpg.  A linear regression model of all significant variables (determined by ANOVA), explained 84% of the variation in mpg. It included only the variables weight and number of cylinders.  Transmission type was determined to be an insignificant contributory variable to the model.  Furthermore, when transmission type was included in the model, a Bootstrap Measures of Relative Importance showed that it only contributed only about 14% to the r^2^ of 87%.  It is recommended that the editors of *Motor Trend* consider the varibles weight, number of cylinders, and possibly horsepower as the most significant explanatory variables of miles per gallon.
