@@ -1,4 +1,3 @@
-library(knitr)
 knit2html("projectRegression.Rmd")
 
 ---
