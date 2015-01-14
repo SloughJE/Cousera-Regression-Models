@@ -1,10 +1,11 @@
-knit2html("projectRegression.Rmd")
 
 ---
 **The Relationship Between Miles per Gallon and Transmission Type**
 ---
 John Slough II
 13 Jan 2015
+
+===
 
 
 **Executive Summary**
@@ -100,6 +101,7 @@ We can now turn towards building the regression model for this dataset.  We will
 
 ```{r,echo=FALSE,eval=FALSE}
 library(MASS)
+library(xtable)
 fit= lm(mpg ~ cyl + disp + hp+drat+wt+vs+am+gear+carb, data=mtcars)
 step = stepAIC(fit, direction="both")
 ```
@@ -107,7 +109,6 @@ step = stepAIC(fit, direction="both")
 fitAIC= lm(mpg ~ cyl  + hp+wt+am, data=mtcars)
 sumAIC=summary(fitAIC)
 round(fitAIC$coefficients,3)
-
 ```
 
 and the coefficients' corresponding p-values:
