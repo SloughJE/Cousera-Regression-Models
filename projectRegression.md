@@ -1,10 +1,11 @@
-knit2html("projectRegression.Rmd")
 
 ---
 **The Relationship Between Miles per Gallon and Transmission Type**
 ---
 John Slough II
 13 Jan 2015
+
+===
 
 
 **Executive Summary**
